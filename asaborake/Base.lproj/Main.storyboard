@@ -28,11 +28,11 @@
             </objects>
             <point key="canvasLocation" x="-1882" y="-270"/>
         </scene>
-        <!--Item-->
+        <!--設定-->
         <scene sceneID="tTJ-4s-kNQ">
             <objects>
                 <navigationController id="RTF-w8-eGa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="u3D-Ix-QOa"/>
+                    <tabBarItem key="tabBarItem" title="設定" image="SettingsIcon" id="u3D-Ix-QOa"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pgU-64-N1Y">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -75,11 +75,11 @@
             </objects>
             <point key="canvasLocation" x="-199" y="155"/>
         </scene>
-        <!--Item-->
+        <!--ホーム-->
         <scene sceneID="hEL-hh-dfb">
             <objects>
                 <navigationController id="Xgw-FP-JXr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="T2X-G8-hXu"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="HomeIcon" id="T2X-G8-hXu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dsw-sf-B8C">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -110,4 +110,8 @@
             <point key="canvasLocation" x="-204" y="-548"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HomeIcon" width="30" height="30"/>
+        <image name="SettingsIcon" width="30" height="30"/>
+    </resources>
 </document>
