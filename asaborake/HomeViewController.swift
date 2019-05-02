@@ -45,10 +45,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
-/*
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let secondViewController = storyboard.instantiateViewController(withIdentifier:menus[indexPath.row].name) as UIViewController
         navigationController?.pushViewController(secondViewController, animated: true)
- */
     }
 }
