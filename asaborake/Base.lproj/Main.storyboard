@@ -220,6 +220,9 @@
                                 <state key="normal" title="始める">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="JaZ-mP-MwW" kind="show" id="YUc-HU-V48"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="対戦の「詠み手」を行います。音声で任意の順番で歌を読み上げます。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCU-nS-vwN">
                                 <rect key="frame" x="16" y="143" width="343" height="36"/>
@@ -506,9 +509,130 @@
             </objects>
             <point key="canvasLocation" x="638" y="233"/>
         </scene>
+        <!--読み上げ中...-->
+        <scene sceneID="csR-GL-pFP">
+            <objects>
+                <viewController id="JaZ-mP-MwW" customClass="YomiageViewController" customModule="asaborake" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nbz-8M-K3J"/>
+                        <viewControllerLayoutGuide type="bottom" id="Doq-mN-JpN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vKo-iU-6ag">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 句目 / 残り 68 句 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPp-ZS-Af7">
+                                <rect key="frame" x="16" y="84" width="343" height="24"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="52W-Qc-EVk">
+                                <rect key="frame" x="16" y="138" width="343" height="457.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="52W-Qc-EVk" secondAttribute="height" multiplier="3:4" id="Awc-xs-gBs"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ktc-1z-gFK" userLabel="Countdown View" customClass="CountdownView" customModule="asaborake" customModuleProvider="target">
+                                <rect key="frame" x="46" y="192" width="283" height="283"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lak-ra-FuH" userLabel="Count">
+                                        <rect key="frame" x="121" y="111" width="39.5" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ktc-1z-gFK" secondAttribute="height" multiplier="1:1" id="7ed-kO-z55"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
+                                        <color key="value" red="0.14063111010000001" green="0.29241071429999999" blue="0.036181005340000003" alpha="0.75219801220000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="evV-FQ-zbW">
+                                <rect key="frame" x="16" y="518" width="343" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZV-uV-i2M">
+                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="80"/>
+                                        <color key="backgroundColor" red="0.14063111010000001" green="0.29241071429999999" blue="0.036181005340000003" alpha="0.75219801220000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="次の句へ" image="NextIcon">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onNextButton:" destination="JaZ-mP-MwW" eventType="touchUpInside" id="N4V-DI-9EE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-GN-9By">
+                                        <rect key="frame" x="176.5" y="0.0" width="166.5" height="80"/>
+                                        <color key="backgroundColor" red="0.14063111010000001" green="0.29241071429999999" blue="0.036181005340000003" alpha="0.75219801220000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                        <inset key="titleEdgeInsets" minX="11" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="終了" image="StopIcon">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onStopButton:" destination="JaZ-mP-MwW" eventType="touchUpInside" id="yvd-ac-e4I"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="JkH-Z2-49N"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ktc-1z-gFK" firstAttribute="leading" secondItem="vKo-iU-6ag" secondAttribute="leadingMargin" constant="30" id="7bG-mO-FoC"/>
+                            <constraint firstItem="Ktc-1z-gFK" firstAttribute="centerY" secondItem="vKo-iU-6ag" secondAttribute="centerY" id="8CJ-va-bjp"/>
+                            <constraint firstItem="MPp-ZS-Af7" firstAttribute="top" secondItem="Nbz-8M-K3J" secondAttribute="bottom" constant="20" id="9Bx-2b-GJc"/>
+                            <constraint firstItem="Ktc-1z-gFK" firstAttribute="centerY" secondItem="vKo-iU-6ag" secondAttribute="centerY" id="ERI-g0-hys"/>
+                            <constraint firstItem="Doq-mN-JpN" firstAttribute="top" secondItem="evV-FQ-zbW" secondAttribute="bottom" constant="20" id="JiF-UN-uQt"/>
+                            <constraint firstItem="Ktc-1z-gFK" firstAttribute="centerX" secondItem="vKo-iU-6ag" secondAttribute="centerX" id="NDP-sT-cfV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ktc-1z-gFK" secondAttribute="trailing" constant="30" id="PSz-Vj-Dy5"/>
+                            <constraint firstItem="52W-Qc-EVk" firstAttribute="top" secondItem="MPp-ZS-Af7" secondAttribute="bottom" constant="30" id="RLv-7U-qYV"/>
+                            <constraint firstItem="MPp-ZS-Af7" firstAttribute="leading" secondItem="vKo-iU-6ag" secondAttribute="leadingMargin" id="cx8-Rt-PQF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="52W-Qc-EVk" secondAttribute="trailing" id="iIB-PV-Ttn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MPp-ZS-Af7" secondAttribute="trailing" id="oaq-zN-cXB"/>
+                            <constraint firstItem="52W-Qc-EVk" firstAttribute="leading" secondItem="vKo-iU-6ag" secondAttribute="leadingMargin" id="q5D-B6-UWz"/>
+                            <constraint firstItem="evV-FQ-zbW" firstAttribute="leading" secondItem="vKo-iU-6ag" secondAttribute="leadingMargin" id="vFC-vf-HM2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="evV-FQ-zbW" secondAttribute="trailing" id="xDx-uH-9Ng"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HoD-Cs-YB7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="読み上げ中..." id="q30-Zp-fMx"/>
+                    <connections>
+                        <outlet property="countdownText" destination="lak-ra-FuH" id="4Vc-d9-gg9"/>
+                        <outlet property="countdownView" destination="Ktc-1z-gFK" id="pDe-dk-8yC"/>
+                        <outlet property="messageText" destination="MPp-ZS-Af7" id="O3L-i7-uJm"/>
+                        <outlet property="nextButton" destination="0ZV-uV-i2M" id="BxJ-5c-sIm"/>
+                        <outlet property="stopButton" destination="Tfq-GN-9By" id="5bZ-Cl-8NH"/>
+                        <outlet property="tankaImage" destination="52W-Qc-EVk" id="rKe-Ha-IEe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7H-5k-d2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1431" y="-546"/>
+        </scene>
     </scenes>
     <resources>
         <image name="HomeIcon" width="30" height="30"/>
+        <image name="NextIcon" width="32" height="32"/>
         <image name="SettingsIcon" width="30" height="30"/>
+        <image name="StopIcon" width="32" height="32"/>
     </resources>
 </document>
