@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var bannerView: GADBannerView!
     
@@ -31,5 +31,24 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    var menus = Menu.createMenus()
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menus.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell : ItemViewCell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! ItemViewCell
+        cell.configurateTheCell(menus[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+/*
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondViewController = storyboard.instantiateViewController(withIdentifier:menus[indexPath.row].name) as UIViewController
+        navigationController?.pushViewController(secondViewController, animated: true)
+ */
+    }
 }
