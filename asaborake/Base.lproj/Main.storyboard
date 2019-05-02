@@ -96,14 +96,31 @@
         <!--ホーム-->
         <scene sceneID="Z6A-Ch-WgO">
             <objects>
-                <viewController id="9Z8-6d-hl1" sceneMemberID="viewController">
+                <viewController id="9Z8-6d-hl1" customClass="HomeViewController" customModule="asaborake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eAg-jO-LK6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEe-oH-5lS" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="568" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sSm-z0-X70"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UTo-fy-PWe" firstAttribute="trailing" secondItem="SEe-oH-5lS" secondAttribute="trailing" id="1FH-VI-aNu"/>
+                            <constraint firstItem="SEe-oH-5lS" firstAttribute="leading" secondItem="UTo-fy-PWe" secondAttribute="leading" id="Kt7-Uc-tX4"/>
+                            <constraint firstItem="UTo-fy-PWe" firstAttribute="bottom" secondItem="SEe-oH-5lS" secondAttribute="bottom" id="s5p-pm-hi7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UTo-fy-PWe"/>
                     </view>
                     <navigationItem key="navigationItem" title="ホーム" id="DJw-7o-mIP"/>
+                    <connections>
+                        <outlet property="bannerView" destination="SEe-oH-5lS" id="kRi-wQ-v2Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5q-NE-aw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
