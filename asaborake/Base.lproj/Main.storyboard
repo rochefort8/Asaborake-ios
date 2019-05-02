@@ -497,9 +497,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="かるた開始準備" id="b2c-Bu-xR5"/>
                     <connections>
-                        <outlet property="bannerView" destination="SuH-Zi-jij" id="pw8-UF-sq4"/>
-                        <outlet property="isAutomaticPlayNextSwitch" destination="OHY-tq-kjb" id="5Zz-j4-rEa"/>
-                        <outlet property="pickerView" destination="wIi-97-OEH" id="KLU-D3-1qu"/>
+                        <outlet property="bannerView" destination="SuH-Zi-jij" id="nUi-4L-UVK"/>
+                        <outlet property="isAutomaticPlayNextSwitch" destination="OHY-tq-kjb" id="sSR-23-uf9"/>
+                        <outlet property="pickerView" destination="wIi-97-OEH" id="POc-Ll-p7O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fB7-oe-r3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
