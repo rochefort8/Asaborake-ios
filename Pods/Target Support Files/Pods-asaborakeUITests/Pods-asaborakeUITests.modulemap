@@ -1,0 +1,6 @@
+framework module Pods_asaborakeUITests {
+  umbrella header "Pods-asaborakeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

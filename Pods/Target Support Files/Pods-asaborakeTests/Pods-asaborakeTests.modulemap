@@ -1,0 +1,6 @@
+framework module Pods_asaborakeTests {
+  umbrella header "Pods-asaborakeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
