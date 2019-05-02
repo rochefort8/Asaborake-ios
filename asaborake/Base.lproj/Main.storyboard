@@ -385,6 +385,9 @@
                                 <state key="normal" title="始める">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="V1b-nN-Dh9" kind="show" id="O6O-H1-ZtG"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="読み上げた歌の下の句を、画面に表示される複数枚の中から選んでください。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgT-Ba-XBf">
                                 <rect key="frame" x="16" y="143" width="343" height="36"/>
@@ -712,8 +715,260 @@
             </objects>
             <point key="canvasLocation" x="2239" y="-546"/>
         </scene>
+        <!--かるた-->
+        <scene sceneID="AKU-UL-egp">
+            <objects>
+                <viewController id="V1b-nN-Dh9" userLabel="かるた" customClass="KarutaViewController" customModule="asaborake" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bv7-dt-D8p"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aqs-MI-daX"/>
+                    </layoutGuides>
+                    <view key="view" tag="-1" contentMode="scaleToFill" id="xZ2-Y1-QyQ" userLabel="KarutaView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ny-vB-AZf">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.14063111010000001" green="0.29241071429999999" blue="0.036181005340000003" alpha="0.75219801220000004" colorSpace="custom" customColorSpace="sRGB"/>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mqK-GE-yzK">
+                                <rect key="frame" x="16" y="518" width="343" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdA-gC-yjG" userLabel="Next Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="80"/>
+                                        <color key="backgroundColor" red="0.14063111010000001" green="0.29241071429999999" blue="0.036181005340000003" alpha="0.75219801220000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="次の句へ" image="NextIcon">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onNext:" destination="V1b-nN-Dh9" eventType="touchUpInside" id="0TP-sQ-wOT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plx-sW-dQP">
+                                        <rect key="frame" x="176.5" y="0.0" width="166.5" height="80"/>
+                                        <color key="backgroundColor" red="0.14063111010000001" green="0.29241071429999999" blue="0.036181005340000003" alpha="0.75219801220000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                        <inset key="titleEdgeInsets" minX="11" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="終了" image="StopIcon">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onStop:" destination="V1b-nN-Dh9" eventType="touchUpInside" id="icr-TV-e4V"/>
+                                            <action selector="onStopButton:" destination="nfg-g8-Ed7" eventType="touchUpInside" id="sSX-HR-3LU"/>
+                                            <segue destination="ORb-7W-qsK" kind="show" identifier="toKarutaFinishedView" id="zFO-Rl-8gr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Ax0-0f-wL4"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 句目 / 残り 68 句 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JM-Sq-Y1P">
+                                <rect key="frame" x="0.0" y="84" width="375" height="24"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kAv-BF-uqM">
+                                <rect key="frame" x="16" y="128" width="343" height="223.5"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="atb-XG-A63">
+                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="223.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="atb-XG-A63" secondAttribute="height" multiplier="3:4" id="TI9-J2-NbA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Bn-Ak-5eL">
+                                        <rect key="frame" x="175.5" y="0.0" width="167.5" height="223.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5Bn-Ak-5eL" secondAttribute="height" multiplier="3:4" id="lL6-RG-PkE"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SQe-h4-oMW">
+                                <rect key="frame" x="16" y="361.5" width="343" height="223"/>
+                                <subviews>
+                                    <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DWw-Mn-QAE">
+                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="223"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="DWw-Mn-QAE" secondAttribute="height" multiplier="3:4" id="hpW-XO-cb4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xuM-Zh-mxT">
+                                        <rect key="frame" x="175.5" y="0.0" width="167.5" height="223"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xuM-Zh-mxT" secondAttribute="height" multiplier="3:4" id="7Nw-TI-83C"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bjl-j7-qel" customClass="CountdownView" customModule="asaborake" customModuleProvider="target">
+                                <rect key="frame" x="46" y="192" width="283" height="283"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bjl-j7-qel" secondAttribute="height" multiplier="1:1" id="CMa-pS-AVM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
+                                        <color key="value" red="0.14063111010000001" green="0.29241071429999999" blue="0.036181005340000003" alpha="0.75219801220000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFA-kS-rwI" userLabel="Count">
+                                <rect key="frame" x="168" y="303.5" width="39.5" height="60"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CorrectMarkImage" translatesAutoresizingMaskIntoConstraints="NO" id="dCd-vI-p0p">
+                                <rect key="frame" x="66" y="212" width="243" height="243"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dCd-vI-p0p" secondAttribute="height" multiplier="1:1" id="bma-LT-cmI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dCd-vI-p0p" secondAttribute="trailing" constant="50" id="26h-xK-9sr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kAv-BF-uqM" secondAttribute="trailing" id="6bq-AV-vhC"/>
+                            <constraint firstItem="SQe-h4-oMW" firstAttribute="top" secondItem="kAv-BF-uqM" secondAttribute="bottom" constant="10" id="8ch-Cn-viJ"/>
+                            <constraint firstItem="3ny-vB-AZf" firstAttribute="bottom" secondItem="Bv7-dt-D8p" secondAttribute="bottom" id="BY5-f4-uus"/>
+                            <constraint firstItem="2JM-Sq-Y1P" firstAttribute="top" secondItem="3ny-vB-AZf" secondAttribute="bottom" constant="20" id="IHb-f9-PQv"/>
+                            <constraint firstItem="dCd-vI-p0p" firstAttribute="centerY" secondItem="xZ2-Y1-QyQ" secondAttribute="centerY" id="K7p-yc-gpj"/>
+                            <constraint firstItem="3ny-vB-AZf" firstAttribute="trailing" secondItem="2JM-Sq-Y1P" secondAttribute="trailing" id="K8M-bc-oGn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SQe-h4-oMW" secondAttribute="trailing" id="L0V-ZB-7gr"/>
+                            <constraint firstItem="2JM-Sq-Y1P" firstAttribute="leading" secondItem="xZ2-Y1-QyQ" secondAttribute="leading" id="NXJ-uy-hcG"/>
+                            <constraint firstItem="QFA-kS-rwI" firstAttribute="centerX" secondItem="xZ2-Y1-QyQ" secondAttribute="centerX" id="Nnd-qj-ixA"/>
+                            <constraint firstItem="Bjl-j7-qel" firstAttribute="centerY" secondItem="xZ2-Y1-QyQ" secondAttribute="centerY" id="Ofo-Kq-FRS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bjl-j7-qel" secondAttribute="trailing" constant="30" id="QWe-EU-vKb"/>
+                            <constraint firstItem="SQe-h4-oMW" firstAttribute="leading" secondItem="xZ2-Y1-QyQ" secondAttribute="leadingMargin" id="Qcl-y7-QMx"/>
+                            <constraint firstItem="Aqs-MI-daX" firstAttribute="top" secondItem="mqK-GE-yzK" secondAttribute="bottom" constant="20" id="Rek-ZP-FDS"/>
+                            <constraint firstItem="3ny-vB-AZf" firstAttribute="leading" secondItem="2JM-Sq-Y1P" secondAttribute="leading" id="Shx-fx-Sou"/>
+                            <constraint firstItem="SQe-h4-oMW" firstAttribute="top" secondItem="kAv-BF-uqM" secondAttribute="bottom" constant="10" id="TDV-yK-NeH"/>
+                            <constraint firstItem="QFA-kS-rwI" firstAttribute="centerY" secondItem="xZ2-Y1-QyQ" secondAttribute="centerY" id="dQq-cU-8vX"/>
+                            <constraint firstItem="kAv-BF-uqM" firstAttribute="leading" secondItem="xZ2-Y1-QyQ" secondAttribute="leadingMargin" id="dfQ-nl-kg9"/>
+                            <constraint firstItem="kAv-BF-uqM" firstAttribute="top" secondItem="2JM-Sq-Y1P" secondAttribute="bottom" constant="20" id="fFN-Ls-9Z1"/>
+                            <constraint firstAttribute="trailing" secondItem="2JM-Sq-Y1P" secondAttribute="trailing" id="iM0-ut-HGI"/>
+                            <constraint firstItem="Bjl-j7-qel" firstAttribute="leading" secondItem="xZ2-Y1-QyQ" secondAttribute="leadingMargin" constant="30" id="j1v-hB-KZG"/>
+                            <constraint firstItem="mqK-GE-yzK" firstAttribute="leading" secondItem="xZ2-Y1-QyQ" secondAttribute="leadingMargin" id="pjr-qJ-HIw"/>
+                            <constraint firstItem="dCd-vI-p0p" firstAttribute="leading" secondItem="xZ2-Y1-QyQ" secondAttribute="leadingMargin" constant="50" id="xNd-yU-sgJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mqK-GE-yzK" secondAttribute="trailing" id="z1x-NU-0T0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FK8-8t-yU4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="かるた中..." id="lq7-Nt-81O"/>
+                    <connections>
+                        <outlet property="collectMarkImage" destination="dCd-vI-p0p" id="vib-Xz-s4g"/>
+                        <outlet property="countdownText" destination="QFA-kS-rwI" id="X5i-OA-1hF"/>
+                        <outlet property="countdownView" destination="Bjl-j7-qel" id="L4j-hC-Paq"/>
+                        <outlet property="imageLeftBottom" destination="DWw-Mn-QAE" id="HK1-BG-QGU"/>
+                        <outlet property="imageLeftTop" destination="atb-XG-A63" id="pPH-Tr-txV"/>
+                        <outlet property="imageRightBottom" destination="xuM-Zh-mxT" id="nRr-bu-beJ"/>
+                        <outlet property="imageRightTop" destination="5Bn-Ak-5eL" id="wXM-jJ-esI"/>
+                        <outlet property="messageText" destination="2JM-Sq-Y1P" id="uHI-NB-uvO"/>
+                        <outlet property="nextButton" destination="KdA-gC-yjG" id="Qp6-5k-Vvf"/>
+                        <outlet property="stopButton" destination="plx-sW-dQP" id="ZK3-Qp-ZKI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMc-vO-JHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="nfg-g8-Ed7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1457" y="233"/>
+        </scene>
+        <!--かるた終了-->
+        <scene sceneID="tr6-bj-Nee">
+            <objects>
+                <viewController id="ORb-7W-qsK" customClass="KarutaFinishedViewController" customModule="asaborake" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7YH-bn-71M"/>
+                        <viewControllerLayoutGuide type="bottom" id="wHC-kl-vR7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ac0-62-5h8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="楽しみましたか？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZD-66-1lq">
+                                <rect key="frame" x="16" y="84" width="343" height="24"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwW-Oh-Ks5">
+                                <rect key="frame" x="16" y="138" width="343" height="36"/>
+                                <string key="text">朝ぼらけ　有明の月と　みるまでに
+吉野の里に　ふれる白雪</string>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="karuta" translatesAutoresizingMaskIntoConstraints="NO" id="3pw-WV-KCN">
+                                <rect key="frame" x="16" y="204" width="343" height="257.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3pw-WV-KCN" secondAttribute="height" multiplier="4:3" id="KTR-xm-wvB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自動でホーム画面に移動します。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MH-UI-UVA">
+                                <rect key="frame" x="16" y="491.5" width="343" height="18"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GdX-NR-25s">
+                                <rect key="frame" x="16" y="539.5" width="343" height="2"/>
+                                <color key="tintColor" red="0.14063111010000001" green="0.29241071429999999" blue="0.036181005340000003" alpha="0.75219801220000004" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbJ-HL-xeT" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="568" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6za-4g-rpE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8MH-UI-UVA" firstAttribute="top" secondItem="3pw-WV-KCN" secondAttribute="bottom" constant="30" id="48k-f9-x7j"/>
+                            <constraint firstItem="dZD-66-1lq" firstAttribute="top" secondItem="7YH-bn-71M" secondAttribute="bottom" constant="20" id="4IS-gx-N21"/>
+                            <constraint firstItem="GdX-NR-25s" firstAttribute="leading" secondItem="Ac0-62-5h8" secondAttribute="leadingMargin" id="6iZ-TL-Uxs"/>
+                            <constraint firstItem="wHC-kl-vR7" firstAttribute="top" secondItem="EbJ-HL-xeT" secondAttribute="bottom" id="91P-dd-sg4"/>
+                            <constraint firstItem="EbJ-HL-xeT" firstAttribute="leading" secondItem="Ac0-62-5h8" secondAttribute="leading" id="Chm-fb-jFH"/>
+                            <constraint firstItem="dZD-66-1lq" firstAttribute="trailing" secondItem="Ac0-62-5h8" secondAttribute="trailingMargin" id="DaH-A5-eIl"/>
+                            <constraint firstItem="dZD-66-1lq" firstAttribute="leading" secondItem="Ac0-62-5h8" secondAttribute="leadingMargin" id="Hpm-Wa-Efm"/>
+                            <constraint firstItem="CwW-Oh-Ks5" firstAttribute="leading" secondItem="Ac0-62-5h8" secondAttribute="leadingMargin" id="IK3-Oa-9aQ"/>
+                            <constraint firstItem="GdX-NR-25s" firstAttribute="top" secondItem="8MH-UI-UVA" secondAttribute="bottom" constant="30" id="Lp4-3c-A6b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3pw-WV-KCN" secondAttribute="trailing" id="WPz-le-2je"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GdX-NR-25s" secondAttribute="trailing" id="j7C-ho-Qig"/>
+                            <constraint firstItem="8MH-UI-UVA" firstAttribute="leading" secondItem="Ac0-62-5h8" secondAttribute="leadingMargin" id="lne-0Y-zcq"/>
+                            <constraint firstAttribute="trailing" secondItem="EbJ-HL-xeT" secondAttribute="trailing" id="lyq-it-E33"/>
+                            <constraint firstItem="CwW-Oh-Ks5" firstAttribute="top" secondItem="dZD-66-1lq" secondAttribute="bottom" constant="30" id="n6l-bE-12i"/>
+                            <constraint firstItem="3pw-WV-KCN" firstAttribute="top" secondItem="CwW-Oh-Ks5" secondAttribute="bottom" constant="30" id="pq7-H8-VeW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8MH-UI-UVA" secondAttribute="trailing" id="rzH-xL-lbH"/>
+                            <constraint firstItem="3pw-WV-KCN" firstAttribute="leading" secondItem="Ac0-62-5h8" secondAttribute="leadingMargin" id="s1m-oG-BcK"/>
+                            <constraint firstItem="CwW-Oh-Ks5" firstAttribute="trailing" secondItem="Ac0-62-5h8" secondAttribute="trailingMargin" id="xST-Rw-ITP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wkJ-Hw-G32"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="かるた終了" id="Msd-s7-1oJ"/>
+                    <connections>
+                        <outlet property="bannerView" destination="EbJ-HL-xeT" id="BN8-TY-eGL"/>
+                        <outlet property="progressView" destination="GdX-NR-25s" id="bW7-yE-LkT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OVk-Sq-h01" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2238" y="233"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="CorrectMarkImage" width="360" height="360"/>
         <image name="HomeIcon" width="30" height="30"/>
         <image name="NextIcon" width="32" height="32"/>
         <image name="SettingsIcon" width="30" height="30"/>

@@ -524,6 +524,8 @@
 		0243F529227B52320075565B /* 044_s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0243F32D227B52310075565B /* 044_s.mp3 */; };
 		0243F52A227B52320075565B /* 001_s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0243F32E227B52310075565B /* 001_s.mp3 */; };
 		0243F532227B53E80075565B /* YomiageFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243F531227B53E80075565B /* YomiageFinishedViewController.swift */; };
+		0243F534227B55E40075565B /* KarutaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243F533227B55E10075565B /* KarutaViewController.swift */; };
+		0243F536227B55E90075565B /* KarutaFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243F535227B55E80075565B /* KarutaFinishedViewController.swift */; };
 		3ECB0826262E65CD3C4AA2CA /* Pods_asaborakeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5383429EFBB6E82CEB762E1C /* Pods_asaborakeUITests.framework */; };
 		CE56DAEBE431750A69C956CB /* Pods_asaborakeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB2ABB9AF98A84510F7FC88 /* Pods_asaborakeTests.framework */; };
 		FE8479E2DA91F70662DB8264 /* Pods_asaborake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA96297990AC54949F2FB996 /* Pods_asaborake.framework */; };
@@ -1070,6 +1072,8 @@
 		0243F32D227B52310075565B /* 044_s.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 044_s.mp3; sourceTree = "<group>"; };
 		0243F32E227B52310075565B /* 001_s.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 001_s.mp3; sourceTree = "<group>"; };
 		0243F531227B53E80075565B /* YomiageFinishedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YomiageFinishedViewController.swift; sourceTree = "<group>"; };
+		0243F533227B55E10075565B /* KarutaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarutaViewController.swift; sourceTree = "<group>"; };
+		0243F535227B55E80075565B /* KarutaFinishedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarutaFinishedViewController.swift; sourceTree = "<group>"; };
 		1AB2ABB9AF98A84510F7FC88 /* Pods_asaborakeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_asaborakeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		312840D515A7D669DD76C0E6 /* Pods-asaborakeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asaborakeTests.debug.xcconfig"; path = "Target Support Files/Pods-asaborakeTests/Pods-asaborakeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		39A57D233D5C581AA654E365 /* Pods-asaborake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asaborake.debug.xcconfig"; path = "Target Support Files/Pods-asaborake/Pods-asaborake.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1139,6 +1143,8 @@
 				0243EF97227B4F280075565B /* HyakuninIsshu.swift */,
 				0243EF99227B4F920075565B /* CountdownView.swift */,
 				0243EF95227B4DB40075565B /* KarutaSetupViewController.swift */,
+				0243F535227B55E80075565B /* KarutaFinishedViewController.swift */,
+				0243F533227B55E10075565B /* KarutaViewController.swift */,
 				0243EF93227B4A260075565B /* YomiageSetupViewController.swift */,
 				0243EF91227B44800075565B /* Memu.swift */,
 				0243EF8B227B3BEA0075565B /* GoogleMobileAds.swift */,
@@ -2492,11 +2498,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0243F534227B55E40075565B /* KarutaViewController.swift in Sources */,
 				0243EF9A227B4F920075565B /* CountdownView.swift in Sources */,
 				0243EF94227B4A260075565B /* YomiageSetupViewController.swift in Sources */,
 				0243EF98227B4F280075565B /* HyakuninIsshu.swift in Sources */,
 				0243EF8C227B3BEB0075565B /* GoogleMobileAds.swift in Sources */,
 				0243EF9C227B50F80075565B /* YomiageViewController.swift in Sources */,
+				0243F536227B55E90075565B /* KarutaFinishedViewController.swift in Sources */,
 				0243EF56227B1BFC0075565B /* AppDelegate.swift in Sources */,
 				0243EF96227B4DB40075565B /* KarutaSetupViewController.swift in Sources */,
 				0243EF8E227B3C290075565B /* HomeViewController.swift in Sources */,
