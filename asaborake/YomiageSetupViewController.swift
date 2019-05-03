@@ -32,6 +32,8 @@ class YomiageSetupViewController: UIViewController  {
         pickerView.dataSource = self;
         pickerView.showsSelectionIndicator = true;
         pickerView.selectRow(1, inComponent:0, animated:true)
+        
+        loadUserDefaluts()
     }
 
     // MARK: - Navigation
@@ -45,6 +47,14 @@ class YomiageSetupViewController: UIViewController  {
         viewController.numberOfShimonokuRepeats =
             Int(numberOfShimonokuRepeatList[pickerView.selectedRow(inComponent: 0)])
     }
+    
+    private func loadUserDefaluts() {
+        let k1 = UserDefaults.standard.integer(forKey: "yomiage_isAutomaticPlayNext")
+        isAutomaticPlayNextSwitch.isOn = (k1 != 0)
+        let k2:Int = UserDefaults.standard.integer(forKey: "yomiage_numberOfShimonokuRepeats")
+        pickerView.selectRow(k2-1, inComponent:0, animated:true)
+    }
+
 }
 
 extension YomiageSetupViewController : UIPickerViewDelegate, UIPickerViewDataSource {

@@ -917,44 +917,171 @@
         <!--設定-->
         <scene sceneID="wA4-RD-cvE">
             <objects>
-                <tableViewController id="VKx-h3-ffd" sceneMemberID="viewController">
+                <tableViewController id="VKx-h3-ffd" customClass="SettingsViewController" customModule="asaborake" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Oxp-oY-Saa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
-                            <tableViewSection headerTitle="全般" id="6t5-xB-h7L">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="9ZJ-WD-LZW">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9ZJ-WD-LZW" id="fDW-Cl-FFH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="かるた" id="BTC-wG-IIZ" userLabel="かるた">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jh1-XJ-o0l">
-                                        <rect key="frame" x="0.0" y="100" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="58" id="jh1-XJ-o0l">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jh1-XJ-o0l" id="fSP-pC-82H">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下の句繰り返し回数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAv-IE-9pU">
+                                                    <rect key="frame" x="36" y="11" width="163" height="18"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="上の句に続く下の句の読み上げ回数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxa-8W-Mb3">
+                                                    <rect key="frame" x="36" y="34" width="224" height="14"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pI6-ba-WWt">
+                                                    <rect key="frame" x="305" y="-21.5" width="50" height="100.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="gmh-Bo-KYn"/>
+                                                        <constraint firstAttribute="height" constant="100" id="yxB-0r-ruZ"/>
+                                                    </constraints>
+                                                </pickerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="pI6-ba-WWt" secondAttribute="trailing" constant="20" id="Ax0-Vw-snZ"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gAv-IE-9pU" secondAttribute="trailing" constant="20" symbolic="YES" id="HwW-z3-zeT"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Uxa-8W-Mb3" secondAttribute="trailing" constant="20" symbolic="YES" id="UZ6-AF-cKN"/>
+                                                <constraint firstItem="gAv-IE-9pU" firstAttribute="top" secondItem="fSP-pC-82H" secondAttribute="topMargin" id="Ydv-zv-Wpk"/>
+                                                <constraint firstItem="Uxa-8W-Mb3" firstAttribute="leading" secondItem="gAv-IE-9pU" secondAttribute="leading" id="clx-Se-SZ6"/>
+                                                <constraint firstItem="gAv-IE-9pU" firstAttribute="leading" secondItem="fSP-pC-82H" secondAttribute="leadingMargin" constant="20" id="cq9-Ot-yd8"/>
+                                                <constraint firstItem="pI6-ba-WWt" firstAttribute="centerY" secondItem="fSP-pC-82H" secondAttribute="centerY" id="dcr-tm-DiG"/>
+                                                <constraint firstItem="Uxa-8W-Mb3" firstAttribute="top" secondItem="gAv-IE-9pU" secondAttribute="bottom" constant="5" id="ePm-lE-wUC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="58" id="30U-rV-3hb">
+                                        <rect key="frame" x="0.0" y="86" width="375" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="30U-rV-3hb" id="AxL-z3-pWP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自動送り" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alk-yo-C0z">
+                                                    <rect key="frame" x="36" y="11" width="72.5" height="18"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="下の句終了後自動で次の句に進む" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fQ-lF-8IF">
+                                                    <rect key="frame" x="36" y="34" width="210" height="14"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0sI-7J-UbC">
+                                                    <rect key="frame" x="300" y="13.5" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="karuta_isAutomaticPlayNextChanged:" destination="VKx-h3-ffd" eventType="valueChanged" id="XpC-DF-8KZ"/>
+                                                        <action selector="onKarutaIsAutomaticPlayNextChanged:" destination="YeI-32-hTQ" eventType="valueChanged" id="HoN-5F-Qfj"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6fQ-lF-8IF" secondAttribute="trailing" constant="20" symbolic="YES" id="7fb-O2-v3J"/>
+                                                <constraint firstItem="0sI-7J-UbC" firstAttribute="centerY" secondItem="AxL-z3-pWP" secondAttribute="centerY" id="AFB-7H-L27"/>
+                                                <constraint firstItem="alk-yo-C0z" firstAttribute="top" secondItem="AxL-z3-pWP" secondAttribute="topMargin" id="IQM-36-Rtt"/>
+                                                <constraint firstItem="6fQ-lF-8IF" firstAttribute="top" secondItem="alk-yo-C0z" secondAttribute="bottom" constant="5" id="Q5G-d1-tkm"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="alk-yo-C0z" secondAttribute="trailing" constant="20" symbolic="YES" id="Uuk-14-aGk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0sI-7J-UbC" secondAttribute="trailing" constant="10" id="n4m-tN-Lql"/>
+                                                <constraint firstItem="alk-yo-C0z" firstAttribute="leading" secondItem="AxL-z3-pWP" secondAttribute="leadingMargin" constant="20" id="p6v-vS-NRD"/>
+                                                <constraint firstItem="6fQ-lF-8IF" firstAttribute="leading" secondItem="alk-yo-C0z" secondAttribute="leading" id="yfr-Jb-38b"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="読み上げ" id="J5t-ov-PTh" userLabel="読み上げ">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hIn-ho-JpQ">
-                                        <rect key="frame" x="0.0" y="172" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="58" id="o8s-eF-brJ">
+                                        <rect key="frame" x="0.0" y="172" width="375" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hIn-ho-JpQ" id="gPt-5S-gxY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o8s-eF-brJ" id="fkW-cE-TIe">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下の句繰り返し回数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbb-sh-nf0">
+                                                    <rect key="frame" x="36" y="11" width="163" height="18"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="上の句に続く下の句の読み上げ回数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4w-qa-3Be">
+                                                    <rect key="frame" x="36" y="34" width="224" height="14"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4i-G2-75n">
+                                                    <rect key="frame" x="305" y="-79.5" width="50" height="216.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="OdJ-mR-wm5"/>
+                                                    </constraints>
+                                                </pickerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jbb-sh-nf0" secondAttribute="trailing" constant="20" symbolic="YES" id="DP0-Wl-wHS"/>
+                                                <constraint firstItem="jbb-sh-nf0" firstAttribute="leading" secondItem="fkW-cE-TIe" secondAttribute="leadingMargin" constant="20" id="Ejl-rr-fOs"/>
+                                                <constraint firstItem="jbb-sh-nf0" firstAttribute="top" secondItem="fkW-cE-TIe" secondAttribute="topMargin" id="GNF-1t-yS6"/>
+                                                <constraint firstItem="R4i-G2-75n" firstAttribute="centerY" secondItem="fkW-cE-TIe" secondAttribute="centerY" id="TDE-V5-mFO"/>
+                                                <constraint firstAttribute="trailing" secondItem="R4i-G2-75n" secondAttribute="trailing" constant="20" id="bYs-PN-eCD"/>
+                                                <constraint firstItem="z4w-qa-3Be" firstAttribute="top" secondItem="jbb-sh-nf0" secondAttribute="bottom" constant="5" id="mqK-8K-wPZ"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="z4w-qa-3Be" secondAttribute="trailing" constant="20" symbolic="YES" id="u6K-d9-0wg"/>
+                                                <constraint firstItem="z4w-qa-3Be" firstAttribute="leading" secondItem="jbb-sh-nf0" secondAttribute="leading" id="vXM-xV-EWf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="58" id="Igc-Qg-K2i">
+                                        <rect key="frame" x="0.0" y="230" width="375" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Igc-Qg-K2i" id="jfl-RR-rBw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自動送り" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="id5-3p-4LS">
+                                                    <rect key="frame" x="36" y="11" width="72.5" height="18"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="下の句終了後自動で次の句に進む" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3y-dj-wE0">
+                                                    <rect key="frame" x="36" y="34" width="210" height="14"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tus-B0-Vgm">
+                                                    <rect key="frame" x="300" y="13.5" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="yomiage_isAutomaticPlayNextChanged:" destination="VKx-h3-ffd" eventType="valueChanged" id="a5J-C4-Z3t"/>
+                                                        <action selector="yomiage_isAutomaticPlayNextValueChanged:" destination="YeI-32-hTQ" eventType="valueChanged" id="vNy-Gh-5CL"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Tus-B0-Vgm" firstAttribute="centerY" secondItem="jfl-RR-rBw" secondAttribute="centerY" id="ETZ-hi-m4z"/>
+                                                <constraint firstItem="id5-3p-4LS" firstAttribute="top" secondItem="jfl-RR-rBw" secondAttribute="topMargin" id="HR3-Rg-unP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Tus-B0-Vgm" secondAttribute="trailing" constant="10" id="OGA-RL-8O4"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="O3y-dj-wE0" secondAttribute="trailing" constant="20" symbolic="YES" id="UWG-LI-Fc6"/>
+                                                <constraint firstItem="O3y-dj-wE0" firstAttribute="leading" secondItem="id5-3p-4LS" secondAttribute="leading" id="d98-pC-tev"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="id5-3p-4LS" secondAttribute="trailing" constant="20" symbolic="YES" id="foY-qG-W19"/>
+                                                <constraint firstItem="id5-3p-4LS" firstAttribute="leading" secondItem="jfl-RR-rBw" secondAttribute="leadingMargin" constant="20" id="gRb-5I-Ra4"/>
+                                                <constraint firstItem="O3y-dj-wE0" firstAttribute="top" secondItem="id5-3p-4LS" secondAttribute="bottom" constant="5" id="hc6-6W-QFP"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -966,10 +1093,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="設定" id="JI9-L7-usE"/>
+                    <connections>
+                        <outlet property="karutaPickerView" destination="pI6-ba-WWt" id="cCS-vG-KvX"/>
+                        <outlet property="karuta_isAutomaticPlayNext" destination="0sI-7J-UbC" id="tRq-i0-O3h"/>
+                        <outlet property="yomiagePickerView" destination="R4i-G2-75n" id="DoD-Hk-l3a"/>
+                        <outlet property="yomiage_isAutomaticPlayNext" destination="Tus-B0-Vgm" id="HIt-4y-gSO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tad-re-yHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="YeI-32-hTQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-950" y="188"/>
+            <point key="canvasLocation" x="-951.20000000000005" y="187.55622188905548"/>
         </scene>
     </scenes>
     <resources>

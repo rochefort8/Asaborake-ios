@@ -527,6 +527,8 @@
 		0243F534227B55E40075565B /* KarutaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243F533227B55E10075565B /* KarutaViewController.swift */; };
 		0243F536227B55E90075565B /* KarutaFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243F535227B55E80075565B /* KarutaFinishedViewController.swift */; };
 		0243F538227B57400075565B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0243F537227B57400075565B /* Settings.bundle */; };
+		02AE75BC227C351C00D1E530 /* SettingsRepeatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AE75BB227C351C00D1E530 /* SettingsRepeatsViewController.swift */; };
+		02B6EDC4227C0ED10048F900 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B6EDC3227C0ED10048F900 /* SettingsViewController.swift */; };
 		3ECB0826262E65CD3C4AA2CA /* Pods_asaborakeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5383429EFBB6E82CEB762E1C /* Pods_asaborakeUITests.framework */; };
 		CE56DAEBE431750A69C956CB /* Pods_asaborakeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB2ABB9AF98A84510F7FC88 /* Pods_asaborakeTests.framework */; };
 		FE8479E2DA91F70662DB8264 /* Pods_asaborake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA96297990AC54949F2FB996 /* Pods_asaborake.framework */; };
@@ -1076,6 +1078,8 @@
 		0243F533227B55E10075565B /* KarutaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarutaViewController.swift; sourceTree = "<group>"; };
 		0243F535227B55E80075565B /* KarutaFinishedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarutaFinishedViewController.swift; sourceTree = "<group>"; };
 		0243F537227B57400075565B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		02AE75BB227C351C00D1E530 /* SettingsRepeatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRepeatsViewController.swift; sourceTree = "<group>"; };
+		02B6EDC3227C0ED10048F900 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1AB2ABB9AF98A84510F7FC88 /* Pods_asaborakeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_asaborakeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		312840D515A7D669DD76C0E6 /* Pods-asaborakeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asaborakeTests.debug.xcconfig"; path = "Target Support Files/Pods-asaborakeTests/Pods-asaborakeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		39A57D233D5C581AA654E365 /* Pods-asaborake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asaborake.debug.xcconfig"; path = "Target Support Files/Pods-asaborake/Pods-asaborake.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1152,6 +1156,8 @@
 				0243EF8B227B3BEA0075565B /* GoogleMobileAds.swift */,
 				0243EF55227B1BFC0075565B /* AppDelegate.swift */,
 				0243EF59227B1BFD0075565B /* Main.storyboard */,
+				02AE75BB227C351C00D1E530 /* SettingsRepeatsViewController.swift */,
+				02B6EDC3227C0ED10048F900 /* SettingsViewController.swift */,
 				0243EF8F227B433D0075565B /* ItemViewCell.swift */,
 				0243EF8D227B3C290075565B /* HomeViewController.swift */,
 				0243EF5C227B1BFE0075565B /* Assets.xcassets */,
@@ -2525,12 +2531,14 @@
 				0243F534227B55E40075565B /* KarutaViewController.swift in Sources */,
 				0243EF9A227B4F920075565B /* CountdownView.swift in Sources */,
 				0243EF94227B4A260075565B /* YomiageSetupViewController.swift in Sources */,
+				02AE75BC227C351C00D1E530 /* SettingsRepeatsViewController.swift in Sources */,
 				0243EF98227B4F280075565B /* HyakuninIsshu.swift in Sources */,
 				0243EF8C227B3BEB0075565B /* GoogleMobileAds.swift in Sources */,
 				0243EF9C227B50F80075565B /* YomiageViewController.swift in Sources */,
 				0243F536227B55E90075565B /* KarutaFinishedViewController.swift in Sources */,
 				0243EF56227B1BFC0075565B /* AppDelegate.swift in Sources */,
 				0243EF96227B4DB40075565B /* KarutaSetupViewController.swift in Sources */,
+				02B6EDC4227C0ED10048F900 /* SettingsViewController.swift in Sources */,
 				0243EF8E227B3C290075565B /* HomeViewController.swift in Sources */,
 				0243F532227B53E80075565B /* YomiageFinishedViewController.swift in Sources */,
 				0243EF90227B433D0075565B /* ItemViewCell.swift in Sources */,

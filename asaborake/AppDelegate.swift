@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
+        // Register default settings
+        registerDefaultsFromSettingsBundle()
+        
         // Check for update
         checkForUpdate()
         
@@ -27,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func checkForUpdate() {
+    private func checkForUpdate() {
         let siren = Siren.shared
         siren.presentationManager = PresentationManager(forceLanguageLocalization: .japanese)
         siren.wail { (results, error) in
@@ -40,6 +43,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    private func registerDefaultsFromSettingsBundle(){
+        let settingsUrl = Bundle.main.url(forResource: "Settings", withExtension: "bundle")!.appendingPathComponent("Root.plist")
+        let settingsPlist = NSDictionary(contentsOf:settingsUrl)!
+        let preferences = settingsPlist["PreferenceSpecifiers"] as! [NSDictionary]
+        
+        var defaultsToRegister = Dictionary<String, Any>()
+        
+        for preference in preferences {
+            guard let key = preference["Key"] as? String else {
+                continue
+            }
+            defaultsToRegister[key] = preference["DefaultValue"]
+        }
+        UserDefaults.standard.register(defaults: defaultsToRegister)
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
