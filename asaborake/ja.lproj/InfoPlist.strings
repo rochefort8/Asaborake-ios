@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  asaborake
+
+  Created by Yuji Ogihara on 2019/05/03.
+  Copyright © 2019年 Yuji Ogihara. All rights reserved.
+*/
+CFBundleDisplayName = "朝ぼらけ";

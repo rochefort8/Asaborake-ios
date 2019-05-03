@@ -1,0 +1,153 @@
+
+/* Class = "UILabel"; text = "上の句に続く下の句の読み上げ回数"; ObjectID = "03q-ev-fjP"; */
+"03q-ev-fjP.text" = "上の句に続く下の句の読み上げ回数";
+
+/* Class = "UIButton"; normalTitle = "次の句へ"; ObjectID = "0ZV-uV-i2M"; */
+"0ZV-uV-i2M.normalTitle" = "次の句へ";
+
+/* Class = "UILabel"; text = "32 句目 / 残り 68 句 "; ObjectID = "2JM-Sq-Y1P"; */
+"2JM-Sq-Y1P.text" = "32 句目 / 残り 68 句 ";
+
+/* Class = "UILabel"; text = "楽しみましたか？"; ObjectID = "2XO-Gh-2Ab"; */
+"2XO-Gh-2Ab.text" = "楽しみましたか？";
+
+/* Class = "UINavigationItem"; title = "読み上げ開始準備"; ObjectID = "44B-sN-DU3"; */
+"44B-sN-DU3.title" = "読み上げ開始準備";
+
+/* Class = "UILabel"; text = "下の句終了後自動で次の句に進む"; ObjectID = "6fQ-lF-8IF"; */
+"6fQ-lF-8IF.text" = "下の句終了後自動で次の句に進む";
+
+/* Class = "UILabel"; text = "自動でホーム画面に移動します。"; ObjectID = "8MH-UI-UVA"; */
+"8MH-UI-UVA.text" = "自動でホーム画面に移動します。";
+
+/* Class = "UILabel"; text = "下の句終了後自動で次の句に進む"; ObjectID = "9Df-QD-r0n"; */
+"9Df-QD-r0n.text" = "下の句終了後自動で次の句に進む";
+
+/* Class = "UITableViewSection"; headerTitle = "かるた"; ObjectID = "BTC-wG-IIZ"; */
+"BTC-wG-IIZ.headerTitle" = "かるた";
+
+/* Class = "UILabel"; text = "朝ぼらけ　有明の月と　みるまでに\n吉野の里に　ふれる白雪"; ObjectID = "CwW-Oh-Ks5"; */
+"CwW-Oh-Ks5.text" = "朝ぼらけ　有明の月と　みるまでに\n吉野の里に　ふれる白雪";
+
+/* Class = "UINavigationItem"; title = "ホーム"; ObjectID = "DJw-7o-mIP"; */
+"DJw-7o-mIP.title" = "ホーム";
+
+/* Class = "UILabel"; text = "読み上げ"; ObjectID = "F54-8t-txk"; */
+"F54-8t-txk.text" = "読み上げ";
+
+/* Class = "UILabel"; text = "朝ぼらけ　有明の月と　みるまでに\n吉野の里に　ふれる白雪"; ObjectID = "I8y-Og-9GA"; */
+"I8y-Og-9GA.text" = "朝ぼらけ　有明の月と　みるまでに\n吉野の里に　ふれる白雪";
+
+/* Class = "UITableViewSection"; headerTitle = "読み上げ"; ObjectID = "J5t-ov-PTh"; */
+"J5t-ov-PTh.headerTitle" = "読み上げ";
+
+/* Class = "UINavigationItem"; title = "設定"; ObjectID = "JI9-L7-usE"; */
+"JI9-L7-usE.title" = "設定";
+
+/* Class = "UIButton"; normalTitle = "次の句へ"; ObjectID = "KdA-gC-yjG"; */
+"KdA-gC-yjG.normalTitle" = "次の句へ";
+
+/* Class = "UILabel"; text = "読み上げた歌の下の句を、画面に表示される複数枚の中から選んでください。"; ObjectID = "KgT-Ba-XBf"; */
+"KgT-Ba-XBf.text" = "読み上げた歌の下の句を、画面に表示される複数枚の中から選んでください。";
+
+/* Class = "UILabel"; text = "対戦の「詠み手」を行います。音声で任意の順番で歌を読み上げます。"; ObjectID = "MCU-nS-vwN"; */
+"MCU-nS-vwN.text" = "対戦の「詠み手」を行います。音声で任意の順番で歌を読み上げます。";
+
+/* Class = "UILabel"; text = "自動送り"; ObjectID = "MJL-Na-lhm"; */
+"MJL-Na-lhm.text" = "自動送り";
+
+/* Class = "UILabel"; text = "32 句目 / 残り 68 句 "; ObjectID = "MPp-ZS-Af7"; */
+"MPp-ZS-Af7.text" = "32 句目 / 残り 68 句 ";
+
+/* Class = "UINavigationItem"; title = "かるた終了"; ObjectID = "Msd-s7-1oJ"; */
+"Msd-s7-1oJ.title" = "かるた終了";
+
+/* Class = "UILabel"; text = "下の句終了後自動で次の句に進む"; ObjectID = "O3y-dj-wE0"; */
+"O3y-dj-wE0.text" = "下の句終了後自動で次の句に進む";
+
+/* Class = "UILabel"; text = "かるた"; ObjectID = "P4V-St-CZg"; */
+"P4V-St-CZg.text" = "かるた";
+
+/* Class = "UILabel"; text = "4"; ObjectID = "QFA-kS-rwI"; */
+"QFA-kS-rwI.text" = "4";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SgY-fB-kxa"; */
+"SgY-fB-kxa.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "ホーム"; ObjectID = "T2X-G8-hXu"; */
+"T2X-G8-hXu.title" = "ホーム";
+
+/* Class = "UIButton"; normalTitle = "終了"; ObjectID = "Tfq-GN-9By"; */
+"Tfq-GN-9By.normalTitle" = "終了";
+
+/* Class = "UIButton"; normalTitle = "始める"; ObjectID = "UNR-mp-svi"; */
+"UNR-mp-svi.normalTitle" = "始める";
+
+/* Class = "UILabel"; text = "上の句に続く下の句の読み上げ回数"; ObjectID = "Uxa-8W-Mb3"; */
+"Uxa-8W-Mb3.text" = "上の句に続く下の句の読み上げ回数";
+
+/* Class = "UILabel"; text = "自動送り"; ObjectID = "alk-yo-C0z"; */
+"alk-yo-C0z.text" = "自動送り";
+
+/* Class = "UILabel"; text = "下の句終了後自動で次の句に進む"; ObjectID = "ami-xj-Gdo"; */
+"ami-xj-Gdo.text" = "下の句終了後自動で次の句に進む";
+
+/* Class = "UINavigationItem"; title = "かるた開始準備"; ObjectID = "b2c-Bu-xR5"; */
+"b2c-Bu-xR5.title" = "かるた開始準備";
+
+/* Class = "UILabel"; text = "自動送り"; ObjectID = "bpI-Fd-q6p"; */
+"bpI-Fd-q6p.text" = "自動送り";
+
+/* Class = "UILabel"; text = "楽しみましたか？"; ObjectID = "dZD-66-1lq"; */
+"dZD-66-1lq.text" = "楽しみましたか？";
+
+/* Class = "UILabel"; text = "下の句繰り返し回数"; ObjectID = "gAv-IE-9pU"; */
+"gAv-IE-9pU.text" = "下の句繰り返し回数";
+
+/* Class = "UILabel"; text = "自動でホーム画面に移動します。"; ObjectID = "hfG-bM-3eJ"; */
+"hfG-bM-3eJ.text" = "自動でホーム画面に移動します。";
+
+/* Class = "UILabel"; text = "自動送り"; ObjectID = "id5-3p-4LS"; */
+"id5-3p-4LS.text" = "自動送り";
+
+/* Class = "UILabel"; text = "下の句繰り返し回数"; ObjectID = "jbb-sh-nf0"; */
+"jbb-sh-nf0.text" = "下の句繰り返し回数";
+
+/* Class = "UILabel"; text = "4"; ObjectID = "lak-ra-FuH"; */
+"lak-ra-FuH.text" = "4";
+
+/* Class = "UINavigationItem"; title = "かるた中..."; ObjectID = "lq7-Nt-81O"; */
+"lq7-Nt-81O.title" = "かるた中...";
+
+/* Class = "UIButton"; normalTitle = "終了"; ObjectID = "plx-sW-dQP"; */
+"plx-sW-dQP.normalTitle" = "終了";
+
+/* Class = "UINavigationItem"; title = "読み上げ中..."; ObjectID = "q30-Zp-fMx"; */
+"q30-Zp-fMx.title" = "読み上げ中...";
+
+/* Class = "UILabel"; text = "下の句繰り返し回数"; ObjectID = "rMV-xL-CUr"; */
+"rMV-xL-CUr.text" = "下の句繰り返し回数";
+
+/* Class = "UINavigationItem"; title = "読み上げ終了"; ObjectID = "rlf-CK-Dnw"; */
+"rlf-CK-Dnw.title" = "読み上げ終了";
+
+/* Class = "UILabel"; text = "上の句に続く下の句の読み上げ回数"; ObjectID = "sX8-gp-rBV"; */
+"sX8-gp-rBV.text" = "上の句に続く下の句の読み上げ回数";
+
+/* Class = "UILabel"; text = "下の句繰り返し回数"; ObjectID = "tRt-Mq-r62"; */
+"tRt-Mq-r62.text" = "下の句繰り返し回数";
+
+/* Class = "UILabel"; text = "設定"; ObjectID = "tlJ-cr-LyA"; */
+"tlJ-cr-LyA.text" = "設定";
+
+/* Class = "UITabBarItem"; title = "設定"; ObjectID = "u3D-Ix-QOa"; */
+"u3D-Ix-QOa.title" = "設定";
+
+/* Class = "UILabel"; text = "設定"; ObjectID = "v4L-y9-nMF"; */
+"v4L-y9-nMF.text" = "設定";
+
+/* Class = "UIButton"; normalTitle = "始める"; ObjectID = "wID-x8-XDM"; */
+"wID-x8-XDM.normalTitle" = "始める";
+
+/* Class = "UILabel"; text = "上の句に続く下の句の読み上げ回数"; ObjectID = "z4w-qa-3Be"; */
+"z4w-qa-3Be.text" = "上の句に続く下の句の読み上げ回数";
