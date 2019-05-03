@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import Siren
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,12 +18,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        // Check for update
+        checkForUpdate()
         
         // Initialize Google Mobille Ads
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         return true
     }
 
+    func checkForUpdate() {
+        let siren = Siren.shared
+        siren.presentationManager = PresentationManager(forceLanguageLocalization: .japanese)
+        siren.wail { (results, error) in
+            if let results = results {
+                print("AlertAction ", results.alertAction)
+                print("Localization ", results.localization)
+                print("LookupModel ", results.lookupModel)
+                print("UpdateType ", results.updateType)
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

@@ -9,6 +9,7 @@ target 'asaborake' do
   pod 'SwiftyJSON',:git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
   pod 'Google-Mobile-Ads-SDK'
   pod 'CircleProgressView', '~> 1.0'
+  pod 'Siren', :git => 'https://github.com/ArtSabintsev/Siren.git', :branch => 'swift4.2'
 
   target 'asaborakeTests' do
     inherit! :search_paths
