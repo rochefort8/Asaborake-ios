@@ -10,7 +10,6 @@
 		0243EF56227B1BFC0075565B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243EF55227B1BFC0075565B /* AppDelegate.swift */; };
 		0243EF5B227B1BFD0075565B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0243EF59227B1BFD0075565B /* Main.storyboard */; };
 		0243EF5D227B1BFE0075565B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0243EF5C227B1BFE0075565B /* Assets.xcassets */; };
-		0243EF60227B1BFE0075565B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0243EF5E227B1BFE0075565B /* LaunchScreen.storyboard */; };
 		0243EF6B227B1BFE0075565B /* asaborakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243EF6A227B1BFE0075565B /* asaborakeTests.swift */; };
 		0243EF76227B1BFE0075565B /* asaborakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243EF75227B1BFE0075565B /* asaborakeUITests.swift */; };
 		0243EF8C227B3BEB0075565B /* GoogleMobileAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243EF8B227B3BEA0075565B /* GoogleMobileAds.swift */; };
@@ -529,6 +528,7 @@
 		0243F538227B57400075565B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0243F537227B57400075565B /* Settings.bundle */; };
 		02AE75BC227C351C00D1E530 /* SettingsRepeatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AE75BB227C351C00D1E530 /* SettingsRepeatsViewController.swift */; };
 		02AE75C8227C804300D1E530 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02AE75C7227C7F1C00D1E530 /* InfoPlist.strings */; };
+		02AE75C9227D6FF100D1E530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0243EF5E227B1BFE0075565B /* LaunchScreen.storyboard */; };
 		02B6EDC4227C0ED10048F900 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B6EDC3227C0ED10048F900 /* SettingsViewController.swift */; };
 		3ECB0826262E65CD3C4AA2CA /* Pods_asaborakeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5383429EFBB6E82CEB762E1C /* Pods_asaborakeUITests.framework */; };
 		CE56DAEBE431750A69C956CB /* Pods_asaborakeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB2ABB9AF98A84510F7FC88 /* Pods_asaborakeTests.framework */; };
@@ -1149,9 +1149,11 @@
 			isa = PBXGroup;
 			children = (
 				0243EF59227B1BFD0075565B /* Main.storyboard */,
+				0243EF55227B1BFC0075565B /* AppDelegate.swift */,
 				0243EF8D227B3C290075565B /* HomeViewController.swift */,
 				0243EF91227B44800075565B /* Memu.swift */,
 				0243EF8F227B433D0075565B /* ItemViewCell.swift */,
+				0243EF8B227B3BEA0075565B /* GoogleMobileAds.swift */,
 				0243EF97227B4F280075565B /* HyakuninIsshu.swift */,
 				0243EF93227B4A260075565B /* YomiageSetupViewController.swift */,
 				0243EF9B227B50F80075565B /* YomiageViewController.swift */,
@@ -1160,8 +1162,6 @@
 				0243EF95227B4DB40075565B /* KarutaSetupViewController.swift */,
 				0243F533227B55E10075565B /* KarutaViewController.swift */,
 				0243F535227B55E80075565B /* KarutaFinishedViewController.swift */,
-				0243EF8B227B3BEA0075565B /* GoogleMobileAds.swift */,
-				0243EF55227B1BFC0075565B /* AppDelegate.swift */,
 				02B6EDC3227C0ED10048F900 /* SettingsViewController.swift */,
 				02AE75BB227C351C00D1E530 /* SettingsRepeatsViewController.swift */,
 				0243EF5C227B1BFE0075565B /* Assets.xcassets */,
@@ -1897,6 +1897,7 @@
 				0243F4FA227B52320075565B /* 067_s.mp3 in Resources */,
 				0243F45E227B52320075565B /* 093_k.mp3 in Resources */,
 				0243F462227B52320075565B /* 032_k.mp3 in Resources */,
+				02AE75C9227D6FF100D1E530 /* LaunchScreen.storyboard in Resources */,
 				02AE75C8227C804300D1E530 /* InfoPlist.strings in Resources */,
 				0243F47D227B52320075565B /* 066_ks.mp3 in Resources */,
 				0243F3A3227B52320075565B /* shimonoku_007.png in Resources */,
@@ -1911,7 +1912,6 @@
 				0243F4BD227B52320075565B /* 041_ks.mp3 in Resources */,
 				0243F489227B52320075565B /* 097_ks.mp3 in Resources */,
 				0243F3FE227B52320075565B /* shimonoku_018.png in Resources */,
-				0243EF60227B1BFE0075565B /* LaunchScreen.storyboard in Resources */,
 				0243F41B227B52320075565B /* 045_k.mp3 in Resources */,
 				0243F3E8227B52320075565B /* shimonoku_084.png in Resources */,
 				0243F3B0227B52320075565B /* shimonoku_063.png in Resources */,
@@ -2743,7 +2743,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hoegaarden1917.asaborake;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rochefort10.asaborake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2762,7 +2762,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hoegaarden1917.asaborake;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rochefort10.asaborake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
