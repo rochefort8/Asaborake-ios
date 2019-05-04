@@ -19,8 +19,9 @@ class GoogleMobileAds {
         view.adUnitID = "ca-app-pub-6855950830684583/9909216322"
         view.rootViewController = parent
         let gadRequest:GADRequest = GADRequest()
-        // テスト用の広告を表示する時のみ使用（申請時に削除）
-        gadRequest.testDevices = ["12345678abcdefgh"]
+
+        // For testing, should be removed when submitting
+//        gadRequest.testDevices = ["12345678abcdefgh"]
         view.load(gadRequest)
     }
 }

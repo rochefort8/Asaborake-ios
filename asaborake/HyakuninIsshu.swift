@@ -13,8 +13,8 @@ import SwiftyJSON
 
 class HyakuninIsshu: NSObject, AVAudioPlayerDelegate {
     
-//    var MAX_TANKA_NUMBER:Int = 100
-    var MAX_TANKA_NUMBER:Int = 5
+    var MAX_TANKA_NUMBER:Int = 100
+//    var MAX_TANKA_NUMBER:Int = 5
 
     var tankaInfo: JSON = JSON.null
     var audioPlayer:AVAudioPlayer!
