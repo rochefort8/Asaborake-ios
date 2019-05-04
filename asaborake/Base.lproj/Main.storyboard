@@ -101,7 +101,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="54" id="QTt-SW-XcQ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="32"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1112,6 +1112,6 @@
         <image name="NextIcon" width="32" height="32"/>
         <image name="SettingsIcon" width="30" height="30"/>
         <image name="StopIcon" width="32" height="32"/>
-        <image name="karuta" width="360" height="240"/>
+        <image name="karuta" width="640" height="480"/>
     </resources>
 </document>
