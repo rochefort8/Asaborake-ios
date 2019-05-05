@@ -484,13 +484,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 句目 / 残り 68 句 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPp-ZS-Af7">
-                                <rect key="frame" x="16" y="84" width="343" height="24"/>
+                                <rect key="frame" x="16" y="84" width="343" height="0.0"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView hidden="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="52W-Qc-EVk">
-                                <rect key="frame" x="16" y="138" width="343" height="457.5"/>
+                                <rect key="frame" x="16" y="104" width="343" height="457.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="52W-Qc-EVk" secondAttribute="height" multiplier="3:4" id="Awc-xs-gBs"/>
                                 </constraints>
@@ -524,10 +524,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="evV-FQ-zbW">
-                                <rect key="frame" x="16" y="518" width="343" height="80"/>
+                                <rect key="frame" x="16" y="576.5" width="343" height="21.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZV-uV-i2M">
-                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="21.5"/>
                                         <color key="backgroundColor" red="0.14063111010000001" green="0.29241071429999999" blue="0.036181005340000003" alpha="0.75219801220000004" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                         <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -540,7 +540,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-GN-9By">
-                                        <rect key="frame" x="176.5" y="0.0" width="166.5" height="80"/>
+                                        <rect key="frame" x="176.5" y="0.0" width="166.5" height="21.5"/>
                                         <color key="backgroundColor" red="0.14063111010000001" green="0.29241071429999999" blue="0.036181005340000003" alpha="0.75219801220000004" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                         <inset key="titleEdgeInsets" minX="11" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -555,7 +555,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="JkH-Z2-49N"/>
+                                    <constraint firstAttribute="height" priority="750" constant="80" id="JkH-Z2-49N"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -568,7 +568,8 @@
                             <constraint firstItem="BaY-vU-dYf" firstAttribute="bottom" secondItem="evV-FQ-zbW" secondAttribute="bottom" constant="20" id="JiF-UN-uQt"/>
                             <constraint firstItem="Ktc-1z-gFK" firstAttribute="centerX" secondItem="BaY-vU-dYf" secondAttribute="centerX" id="NDP-sT-cfV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ktc-1z-gFK" secondAttribute="trailing" constant="30" id="PSz-Vj-Dy5"/>
-                            <constraint firstItem="52W-Qc-EVk" firstAttribute="top" secondItem="MPp-ZS-Af7" secondAttribute="bottom" constant="30" id="RLv-7U-qYV"/>
+                            <constraint firstItem="52W-Qc-EVk" firstAttribute="top" secondItem="MPp-ZS-Af7" secondAttribute="bottom" constant="20" id="RLv-7U-qYV"/>
+                            <constraint firstItem="evV-FQ-zbW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="52W-Qc-EVk" secondAttribute="bottom" constant="15" id="Yqp-Ea-xj8"/>
                             <constraint firstItem="MPp-ZS-Af7" firstAttribute="leading" secondItem="vKo-iU-6ag" secondAttribute="leadingMargin" id="cx8-Rt-PQF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="52W-Qc-EVk" secondAttribute="trailing" id="iIB-PV-Ttn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MPp-ZS-Af7" secondAttribute="trailing" id="oaq-zN-cXB"/>
@@ -684,10 +685,10 @@
                                 <color key="backgroundColor" red="0.14063111010000001" green="0.29241071429999999" blue="0.036181005340000003" alpha="0.75219801220000004" colorSpace="custom" customColorSpace="sRGB"/>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mqK-GE-yzK">
-                                <rect key="frame" x="16" y="518" width="343" height="80"/>
+                                <rect key="frame" x="16" y="575.5" width="343" height="22.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdA-gC-yjG" userLabel="Next Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="22.5"/>
                                         <color key="backgroundColor" red="0.14063111010000001" green="0.29241071429999999" blue="0.036181005340000003" alpha="0.75219801220000004" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                         <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -700,7 +701,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plx-sW-dQP">
-                                        <rect key="frame" x="176.5" y="0.0" width="166.5" height="80"/>
+                                        <rect key="frame" x="176.5" y="0.0" width="166.5" height="22.5"/>
                                         <color key="backgroundColor" red="0.14063111010000001" green="0.29241071429999999" blue="0.036181005340000003" alpha="0.75219801220000004" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                         <inset key="titleEdgeInsets" minX="11" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -716,17 +717,17 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Ax0-0f-wL4"/>
+                                    <constraint firstAttribute="height" priority="750" constant="80" id="Ax0-0f-wL4"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 句目 / 残り 68 句 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JM-Sq-Y1P">
-                                <rect key="frame" x="0.0" y="84" width="375" height="24"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="0.0"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kAv-BF-uqM">
-                                <rect key="frame" x="16" y="128" width="343" height="223.5"/>
+                                <rect key="frame" x="16" y="104" width="343" height="223.5"/>
                                 <subviews>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="atb-XG-A63">
                                         <rect key="frame" x="0.0" y="0.0" width="167.5" height="223.5"/>
@@ -743,7 +744,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SQe-h4-oMW">
-                                <rect key="frame" x="16" y="361.5" width="343" height="223"/>
+                                <rect key="frame" x="16" y="337.5" width="343" height="223"/>
                                 <subviews>
                                     <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DWw-Mn-QAE">
                                         <rect key="frame" x="0.0" y="0.0" width="167.5" height="223"/>
@@ -794,6 +795,7 @@
                             <constraint firstItem="SQe-h4-oMW" firstAttribute="top" secondItem="kAv-BF-uqM" secondAttribute="bottom" constant="10" id="8ch-Cn-viJ"/>
                             <constraint firstItem="3ny-vB-AZf" firstAttribute="bottom" secondItem="d8Z-oG-kb3" secondAttribute="top" id="BY5-f4-uus"/>
                             <constraint firstItem="2JM-Sq-Y1P" firstAttribute="top" secondItem="3ny-vB-AZf" secondAttribute="bottom" constant="20" id="IHb-f9-PQv"/>
+                            <constraint firstItem="mqK-GE-yzK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="SQe-h4-oMW" secondAttribute="bottom" constant="15" id="Jld-7S-sqH"/>
                             <constraint firstItem="dCd-vI-p0p" firstAttribute="centerY" secondItem="xZ2-Y1-QyQ" secondAttribute="centerY" id="K7p-yc-gpj"/>
                             <constraint firstItem="3ny-vB-AZf" firstAttribute="trailing" secondItem="2JM-Sq-Y1P" secondAttribute="trailing" id="K8M-bc-oGn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SQe-h4-oMW" secondAttribute="trailing" id="L0V-ZB-7gr"/>
