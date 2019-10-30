@@ -1,52 +1,93 @@
 //
-//  HomeViewController.swift
+//  HomeCollectionViewController.swift
 //  asaborake
 //
-//  Created by Yuji Ogihara on 2019/05/02.
+//  Created by Yuji Ogihara on 2019/10/30.
 //  Copyright © 2019年 Yuji Ogihara. All rights reserved.
 //
 
 import UIKit
 import GoogleMobileAds
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var bannerView: GADBannerView!
+    
+    let menus = Menu.createMenus()
+    var savedIndex:Int = 0
+    
+    // Huge Value for infinite loop
+    let PageCount = 2000
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         let banner = GoogleMobileAds()
         banner.createBannarView(view: bannerView, parent: self)
+        
+        self.edgesForExtendedLayout = UIRectEdge.bottom
+//        let screenSize = UIScreen.main.bounds
+        let screenSize = collectionView.bounds
+
+        let collectionViewFlowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        collectionViewFlowLayout.itemSize =
+            CGSize(width:screenSize.width / 1.2,
+                   height:screenSize.height / 1.2)
+        collectionViewFlowLayout.minimumInteritemSpacing = 0.0
+        collectionViewFlowLayout.minimumLineSpacing = 20.0
+        
+        let screenshotsSectionInset = screenSize.width / 12.0
+        collectionViewFlowLayout.sectionInset =
+              UIEdgeInsets(top: 64.0, left: screenshotsSectionInset,
+                        bottom: 20.0, right: screenshotsSectionInset)
+        collectionView.selectItem(at: [0,2], animated: false, scrollPosition: .centeredHorizontally)
+        
     }
     
-
-    /*
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
-    var menus = Menu.createMenus()
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menus.count
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell : ItemViewCell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! ItemViewCell
-        cell.configurateTheCell(menus[indexPath.row])
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return PageCount
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath as IndexPath)as! MenuViewCell
+        /*
+         let hue = CGFloat(indexPath.item) / 20 // CGFloat(POMAppCount)
+         */
+        let index = realIndex(index:indexPath.row)
+        cell.configurateTheCell(menus[index])
         return cell
     }
     
-    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        print(realIndex(index: indexPath.row))
+        savedIndex = realIndex(index: indexPath.row)
+
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondViewController = storyboard.instantiateViewController(withIdentifier:menus[indexPath.row].name) as UIViewController
+        let secondViewController = storyboard.instantiateViewController(withIdentifier:menus[savedIndex].name) as UIViewController
         navigationController?.pushViewController(secondViewController, animated: true)
+
+    }
+    
+    private func realIndex(index : Int)->Int {
+        /* At this moment, 0-2 is availabe */
+        return (index % 2)
     }
 }

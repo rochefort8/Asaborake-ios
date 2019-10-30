@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0235183423691AA100FEE7E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0235183323691AA100FEE7E5 /* HomeViewController.swift */; };
+		0235183623691B6A00FEE7E5 /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0235183523691B6A00FEE7E5 /* MenuViewCell.swift */; };
+		0235183823691F0700FEE7E5 /* HomeCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0235183723691F0700FEE7E5 /* HomeCollectionViewFlowLayout.swift */; };
 		0243EF56227B1BFC0075565B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243EF55227B1BFC0075565B /* AppDelegate.swift */; };
 		0243EF5B227B1BFD0075565B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0243EF59227B1BFD0075565B /* Main.storyboard */; };
 		0243EF5D227B1BFE0075565B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0243EF5C227B1BFE0075565B /* Assets.xcassets */; };
 		0243EF6B227B1BFE0075565B /* asaborakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243EF6A227B1BFE0075565B /* asaborakeTests.swift */; };
 		0243EF76227B1BFE0075565B /* asaborakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243EF75227B1BFE0075565B /* asaborakeUITests.swift */; };
 		0243EF8C227B3BEB0075565B /* GoogleMobileAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243EF8B227B3BEA0075565B /* GoogleMobileAds.swift */; };
-		0243EF8E227B3C290075565B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243EF8D227B3C290075565B /* HomeViewController.swift */; };
 		0243EF90227B433D0075565B /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243EF8F227B433D0075565B /* ItemViewCell.swift */; };
 		0243EF92227B44800075565B /* Memu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243EF91227B44800075565B /* Memu.swift */; };
 		0243EF94227B4A260075565B /* YomiageSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243EF93227B4A260075565B /* YomiageSetupViewController.swift */; };
@@ -553,6 +555,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0235183323691AA100FEE7E5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0235183523691B6A00FEE7E5 /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
+		0235183723691F0700FEE7E5 /* HomeCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		0243EF52227B1BFC0075565B /* asaborake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asaborake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0243EF55227B1BFC0075565B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0243EF5A227B1BFD0075565B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -566,7 +571,6 @@
 		0243EF75227B1BFE0075565B /* asaborakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = asaborakeUITests.swift; sourceTree = "<group>"; };
 		0243EF77227B1BFE0075565B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0243EF8B227B3BEA0075565B /* GoogleMobileAds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMobileAds.swift; sourceTree = "<group>"; };
-		0243EF8D227B3C290075565B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0243EF8F227B433D0075565B /* ItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
 		0243EF91227B44800075565B /* Memu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memu.swift; sourceTree = "<group>"; };
 		0243EF93227B4A260075565B /* YomiageSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YomiageSetupViewController.swift; sourceTree = "<group>"; };
@@ -1150,8 +1154,10 @@
 			children = (
 				0243EF59227B1BFD0075565B /* Main.storyboard */,
 				0243EF55227B1BFC0075565B /* AppDelegate.swift */,
-				0243EF8D227B3C290075565B /* HomeViewController.swift */,
+				0235183323691AA100FEE7E5 /* HomeViewController.swift */,
+				0235183723691F0700FEE7E5 /* HomeCollectionViewFlowLayout.swift */,
 				0243EF91227B44800075565B /* Memu.swift */,
+				0235183523691B6A00FEE7E5 /* MenuViewCell.swift */,
 				0243EF8F227B433D0075565B /* ItemViewCell.swift */,
 				0243EF8B227B3BEA0075565B /* GoogleMobileAds.swift */,
 				0243EF97227B4F280075565B /* HyakuninIsshu.swift */,
@@ -2539,16 +2545,18 @@
 				0243EF94227B4A260075565B /* YomiageSetupViewController.swift in Sources */,
 				02AE75BC227C351C00D1E530 /* SettingsRepeatsViewController.swift in Sources */,
 				0243EF98227B4F280075565B /* HyakuninIsshu.swift in Sources */,
+				0235183423691AA100FEE7E5 /* HomeViewController.swift in Sources */,
 				0243EF8C227B3BEB0075565B /* GoogleMobileAds.swift in Sources */,
 				0243EF9C227B50F80075565B /* YomiageViewController.swift in Sources */,
 				0243F536227B55E90075565B /* KarutaFinishedViewController.swift in Sources */,
 				0243EF56227B1BFC0075565B /* AppDelegate.swift in Sources */,
 				0243EF96227B4DB40075565B /* KarutaSetupViewController.swift in Sources */,
 				02B6EDC4227C0ED10048F900 /* SettingsViewController.swift in Sources */,
-				0243EF8E227B3C290075565B /* HomeViewController.swift in Sources */,
+				0235183623691B6A00FEE7E5 /* MenuViewCell.swift in Sources */,
 				0243F532227B53E80075565B /* YomiageFinishedViewController.swift in Sources */,
 				0243EF90227B433D0075565B /* ItemViewCell.swift in Sources */,
 				0243EF92227B44800075565B /* Memu.swift in Sources */,
+				0235183823691F0700FEE7E5 /* HomeCollectionViewFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
