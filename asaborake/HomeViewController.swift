@@ -28,21 +28,21 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         banner.createBannarView(view: bannerView, parent: self)
         
         self.edgesForExtendedLayout = UIRectEdge.bottom
-//        let screenSize = UIScreen.main.bounds
-        let screenSize = collectionView.bounds
+        let screenSize = UIScreen.main.bounds
+//        let screenSize = collectionView.bounds
 
         let collectionViewFlowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
         collectionViewFlowLayout.itemSize =
             CGSize(width:screenSize.width / 1.2,
-                   height:screenSize.height / 1.2)
+                   height:(screenSize.height - 200) / 1.2)
         collectionViewFlowLayout.minimumInteritemSpacing = 0.0
         collectionViewFlowLayout.minimumLineSpacing = 20.0
         
         let screenshotsSectionInset = screenSize.width / 12.0
         collectionViewFlowLayout.sectionInset =
-              UIEdgeInsets(top: 64.0, left: screenshotsSectionInset,
-                        bottom: 20.0, right: screenshotsSectionInset)
+              UIEdgeInsets(top: 0.0, left: screenshotsSectionInset,
+                        bottom: 0.0, right: screenshotsSectionInset)
         collectionView.selectItem(at: [0,2], animated: false, scrollPosition: .centeredHorizontally)
         
     }
@@ -88,6 +88,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     private func realIndex(index : Int)->Int {
         /* At this moment, 0-2 is availabe */
-        return (index % 2)
+        return (index % menus.count)
     }
 }

@@ -528,6 +528,7 @@
 		0243F534227B55E40075565B /* KarutaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243F533227B55E10075565B /* KarutaViewController.swift */; };
 		0243F536227B55E90075565B /* KarutaFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243F535227B55E80075565B /* KarutaFinishedViewController.swift */; };
 		0243F538227B57400075565B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0243F537227B57400075565B /* Settings.bundle */; };
+		027F36F323702917006777FC /* LearningSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027F36F223702917006777FC /* LearningSetupViewController.swift */; };
 		02AE75BC227C351C00D1E530 /* SettingsRepeatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AE75BB227C351C00D1E530 /* SettingsRepeatsViewController.swift */; };
 		02AE75C8227C804300D1E530 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02AE75C7227C7F1C00D1E530 /* InfoPlist.strings */; };
 		02AE75C9227D6FF100D1E530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0243EF5E227B1BFE0075565B /* LaunchScreen.storyboard */; };
@@ -1083,6 +1084,7 @@
 		0243F533227B55E10075565B /* KarutaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarutaViewController.swift; sourceTree = "<group>"; };
 		0243F535227B55E80075565B /* KarutaFinishedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarutaFinishedViewController.swift; sourceTree = "<group>"; };
 		0243F537227B57400075565B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		027F36F223702917006777FC /* LearningSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSetupViewController.swift; sourceTree = "<group>"; };
 		02AE75BB227C351C00D1E530 /* SettingsRepeatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRepeatsViewController.swift; sourceTree = "<group>"; };
 		02AE75BD227C7DDC00D1E530 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		02AE75BE227C7DDC00D1E530 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -1170,6 +1172,7 @@
 				0243F535227B55E80075565B /* KarutaFinishedViewController.swift */,
 				02B6EDC3227C0ED10048F900 /* SettingsViewController.swift */,
 				02AE75BB227C351C00D1E530 /* SettingsRepeatsViewController.swift */,
+				027F36F223702917006777FC /* LearningSetupViewController.swift */,
 				0243EF5C227B1BFE0075565B /* Assets.xcassets */,
 				0243EF5E227B1BFE0075565B /* LaunchScreen.storyboard */,
 				0243EF61227B1BFE0075565B /* Info.plist */,
@@ -2548,6 +2551,7 @@
 				0235183423691AA100FEE7E5 /* HomeViewController.swift in Sources */,
 				0243EF8C227B3BEB0075565B /* GoogleMobileAds.swift in Sources */,
 				0243EF9C227B50F80075565B /* YomiageViewController.swift in Sources */,
+				027F36F323702917006777FC /* LearningSetupViewController.swift in Sources */,
 				0243F536227B55E90075565B /* KarutaFinishedViewController.swift in Sources */,
 				0243EF56227B1BFC0075565B /* AppDelegate.swift in Sources */,
 				0243EF96227B4DB40075565B /* KarutaSetupViewController.swift in Sources */,

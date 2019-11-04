@@ -24,7 +24,7 @@ class ItemViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func configurateTheCell(_ menu: Menu) {
-        uiImageView.image = UIImage(named: menu.image)
+        uiImageView.image = UIImage(named: menu.name)
         uiLabel.text       = menu.title
         
         uiImageView.layer.masksToBounds = true
